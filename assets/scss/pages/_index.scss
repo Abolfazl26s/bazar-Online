@@ -1,0 +1,95 @@
+.banner_content {
+  h2 {
+    font-size: 3.8vw;
+    color: adjust-hue($color: #000000, $degrees: 0);
+    // -webkit-text-stroke: 0.01em var(--darkColor);
+  }
+  h5 {
+    display: -webkit-box;
+    max-width: 30vw;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.625;
+    // font-size: 2.8vw;
+  }
+}
+
+.Advertising {
+  .sale-banner,
+  .hover_effect1 {
+    border-radius: var(--borderRadius);
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.308);
+    width: 100%;
+    height: 220px;
+    padding: 0;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}
+
+.heading_s4 {
+  h3 {
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.categories {
+  .item {
+    .categories_box {
+      a {
+        background-color: transparent !important;
+      }
+      img {
+        max-height: 143px;
+        object-fit: fill;
+      }
+    }
+  }
+}
+
+.tab-products {
+  .tabName {
+    font-size: 1.2em;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.newsLetter {
+  h4 {
+    font-weight: 900;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.15);
+  }
+  background: linear-gradient(to top, #ffb507, #e4f58b);
+
+  .newsletter_form {
+    background: transparent !important;
+    input {
+      border-radius: 0 25px 25px 0 !important;
+    }
+    button[type='submit'] {
+      border-radius: 25px 0 0 25px !important;
+    }
+  }
+}
+
+.blogs {
+  .showBlogs {
+    width: 150px;
+    padding: 0.5em 1em;
+    border-radius: var(--borderRadius);
+    border: 1px dashed;
+    text-align: center;
+    margin: auto;
+    margin-top: 2em;
+  }
+}

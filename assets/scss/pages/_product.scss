@@ -1,0 +1,59 @@
+.mfp-counter {
+  direction: ltr;
+}
+
+.product_img_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 25em;
+  }
+}
+
+
+
+#Additional-info {
+  img {
+    display: block;
+    margin: auto;
+    border-radius: var(--borderRadius);
+  }
+}
+
+.comment_img {
+  position: relative;
+  img {
+    width: 100px;
+    max-height: 100px;
+  }
+}
+.like,
+.dislike {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #f6f6f6d3;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 5px 10px;
+
+  font-size: 14px;
+  line-height: 1.428571429;
+  border-radius: 4px;
+  i {
+    font-size: 1.5em;
+  }
+}
+.qty1,
+.qty2 {
+  border: none !important;
+  min-width: 30px;
+  max-width: 50px;
+  cursor: pointer;
+  text-align: center;
+  background: transparent;
+}

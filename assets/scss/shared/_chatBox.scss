@@ -1,0 +1,72 @@
+// color:
+$sendBGColor: radial-gradient(
+  circle farthest-corner at 46.6% 51.1%,
+  rgba(255, 146, 139, 1) 0%,
+  rgba(255, 172, 129, 1) 90%
+);
+
+$receiveBGColor: linear-gradient(
+  110.1deg,
+  rgba(30, 2, 83, 1) 44.2%,
+  rgba(198, 55, 160, 1) 138.2%
+);
+
+// ==========chatBox================
+.chatPopUp {
+  position: fixed;
+  bottom: 6%;
+  right: 20px;
+  font-size: 1.8em;
+  background-color: #fda543;
+  padding: 0.2em 0.3em;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 99;
+  border: 1px dashed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  color: var(--grayColor);
+  &:hover {
+    transform: translateX(-10%);
+    i {
+      color: var(--lightColor);
+    }
+    color: var(--lightColor);
+  }
+
+  i {
+    filter: drop-shadow(0 1px 4px rgba(255, 255, 255, 0.8));
+  }
+}
+
+.chatBox {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 400px;
+  height: 80vh;
+  background: lightgray;
+  z-index: 1000;
+  transition: all 0.3s ease-out;
+  transform: scaleY(0);
+
+  &.active {
+    transform: scaleY(1);
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .conv-form-wrapper {
+    textarea {
+      height: 30px;
+      overflow: hidden;
+      resize: none;
+    }
+  }
+
+  #message {
+    padding: 20px;
+  }
+}

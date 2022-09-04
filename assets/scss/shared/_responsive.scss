@@ -1,0 +1,21 @@
+@media screen and (max-width: 1024px) {
+  footer {
+    .newsletter_form {
+      .btn {
+        border-width: 1px;
+        cursor: pointer;
+        line-height: normal;
+        padding: 12px 16px;
+        text-transform: capitalize;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .search_form_btn .form-control {
+    padding-right: 15px !important;
+    padding-left: 77px;
+  }
+}

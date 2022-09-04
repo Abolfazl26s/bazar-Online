@@ -1,0 +1,268 @@
+:root {
+  --primaryColor: #f6961e;
+  // --primaryColor: #00a8ab;
+  --grayColor: #333;
+  --darkColor: #363738;
+  --lightColor: #fff;
+  --borderRadius: 25px;
+}
+.narenjColor {
+  color: rgb(204, 150, 0);
+  text-shadow: 0 2px 4px rgba(169, 184, 39, 0.5);
+}
+// import fonts
+@font-face {
+  font-family: "kalameh";
+  src: url("../fonts/kalameh/KalamehFaNum-Regular.eot"),
+    url("../fonts/kalameh/KalamehFaNum-Regular.ttf"),
+    url("../fonts/kalameh/KalamehFaNum-Regular.woff"),
+    url("../fonts/kalameh/KalamehFaNum-Regular.woff2");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+p,
+body {
+  font-family: "kalameh" !important;
+}
+
+// import shared
+@import "./shared/chatBox";
+@import "./shared/loading";
+@import "./shared/cardProduct";
+@import "./shared/cardBlogs";
+
+@import "./shared/responsive";
+
+// import Pages
+@import "./pages/index";
+@import "./pages/login";
+@import "./pages/signup";
+@import "./pages/product";
+@import "./pages/searchPage";
+@import "./pages/shop-cart";
+@import "./pages/myAccountPage";
+@import "./pages/singleBlog";
+
+.loginSignUp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    font-weight: 900;
+  }
+}
+.btn-fill-out {
+  &:hover {
+    color: var(--primaryColor) !important;
+  }
+}
+
+a.product_img_zoom {
+  z-index: 9;
+}
+
+#navbarSidetoggle {
+  .nav_item {
+    font-size: 80%;
+  }
+}
+
+// footer {
+//   a,
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6,
+//   p,
+//   i {
+//     color: #fff !important;
+//   }
+// }
+.bg_apricot {
+  background-color: #fde0ca !important;
+  // background-color: var(--primaryColor) !important;
+}
+
+.rotateIcon {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-180deg);
+}
+
+.breadcrumb_section.page-title-mini {
+  padding: 50px 0 !important;
+}
+
+// .product_img {
+//   cursor: pointer;
+
+// }
+
+.text-concat {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: var(--numConcat);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.disabled {
+  opacity: 0.3;
+  cursor: text;
+}
+
+.boxCount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .counter {
+    font-size: 35px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    border: 5px dashed #ac0d9c;
+    font-weight: 700 !important;
+  }
+  .boxName {
+    font-weight: 700 !important;
+    margin-top: 10px;
+    padding: 0.5em 1em;
+    background: var(--lightColor);
+  }
+}
+
+.heading_s1 {
+  h5 {
+    font-size: 1.5em;
+  }
+}
+
+.scrollup {
+  right: 1em;
+}
+
+.ck.ck-editor__main > .ck-editor__editable {
+  min-height: 200px;
+}
+
+// !================show mobile nav===========
+@media screen and (max-width: 540px) {
+  .navbarTopMobile {
+    z-index: 2000000000;
+    position: sticky;
+    top: 0%;
+    a.pr_search_trigger {
+      i {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  #goftino_w {
+    bottom: 55px;
+  }
+
+  .product_search_form {
+    .inputSearch,
+    .input-group-prepend {
+      height: 40px !important;
+    }
+  }
+
+  footer {
+    margin-bottom: 3.5em !important;
+  }
+  .scrollup {
+    bottom: 5.5em;
+  }
+
+  #navCatContent {
+    height: 93vh;
+    padding-bottom: 3em;
+    z-index: 2000000002;
+  }
+
+  .boxCount {
+    transform: scale(0.8);
+  }
+
+  #navMobile {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--lightColor);
+    z-index: 2000000002;
+    margin-top: 3em !important;
+    border-top: 2px solid var(--primaryColor);
+    justify-content: center;
+    .categories_btn,
+    .categories_menu {
+      all: initial;
+    }
+
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+    .navItem {
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      width: 40px;
+      height: 40px;
+
+      i {
+        object-fit: fill;
+        cursor: pointer !important;
+        font-size: 24px;
+        padding: 0 !important;
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+
+      &.active {
+        // background-color: var(--primaryColor);
+        i {
+          color: var(--primaryColor);
+          // transform: rotate(-45deg);
+        }
+        // animation: rotateBox 0.5s forwards;
+      }
+    }
+
+    @keyframes rotateBox {
+      from {
+        border-radius: 0px;
+        transform: rotate(0deg);
+        i {
+          transform: rotate(0deg);
+        }
+      }
+      to {
+        border-radius: 5px;
+        transform: rotate(45deg);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+// ======================
